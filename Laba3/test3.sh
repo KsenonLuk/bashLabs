@@ -3,7 +3,7 @@
 # Задание 3.2
 
 # USER2
-su -l $4 -c '
+su -l $4 -c'
 cd /srv/dir1
 touch file_u2d1
 whoami && echo "создал(а) файл в каталоге" && pwd
@@ -12,7 +12,7 @@ touch file_u2d2
 echo "`whoami` создал(а) файл в каталоге `pwd`" '
 
 # USER1
-su -l $3 -c '
+su -l $3 -c'
 
 # user1 - доступ к файлам в dir1
 cd /srv/dir1/
@@ -24,10 +24,10 @@ echo $?
 cd /srv/dir2/
 echo "`whoami` создал(а) файл в каталоге `pwd`"
 cp file_u2d2 file_u1d2
-echo $? '
+echo $?'
 
 # USER3'
-su -l $5 -c '
+su -l $5 -c'
 # user3 - доступ к файлам в dir1
 cd /srv/dir1/
 whoami && echo "доступ к файлу в каталоге" && pwd

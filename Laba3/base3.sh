@@ -25,8 +25,8 @@ gpasswd -a $4 $2
 gpasswd -a $5 $2
 # Use a for loop to iterate from 1 to 3 and display user information
 for i in $(seq 1 3); do
-    echo "polzovatel user$i"
-    id user$i
+    echo "polzovatel u$i"
+    id u$i
 done
 
 # Create directories and set group and permissions
